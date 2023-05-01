@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            THIRSTY CONTAINERS
+        </title>        
+    </head>
+    <style>
+        .navbar {
+        overflow: hidden;
+        background-color: #b3e2faf6;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar a {
+        float: left;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 10px 120px;
+        text-decoration: none;
+        }
+
+        .dropdown {
+        float: left;
+        overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color:  black;
+        padding: 10px 100px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+        background-color:#77c6fa;
+;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color:  #b3e2faf6;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 10px 83px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+
+        .dropdown-content a:hover {
+        background-color: #77c6fa;
+        }
+        
+        .show {
+        display: block;
+        }
+      
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        max-width: 1500%
+      }
+      .image {
+        flex-basis: 40%
+      }
+      .text {
+        font-size: 20px;
+        padding-left: 20px;
+      }
+    </style>
+    <body>
+        <body style="background-color:rgba(205, 232, 247, 0.94);" >
+            <p style="text-align:center;color:rgba(56, 3, 148, 0.874);font-size:200%;"><b>THIRSTY CONTAINERS</b></p>
+            <p style="text-align:center;color:rgb(250, 183, 239);font-size:100%;"> <h1><marquee bgcolor="LIGHTBLUE">If water is considered as child, then bottle is the mother which carries water!!</marquee> </h1></p>
+            <font-color:"black";font-family:"Timesnewroman";font-size:"20px">
+                <div class="navbar">
+                    <a href="#home"><h3><b>Home</b></h3></a>
+                    <a href="#news"><h3><b>About</b></h3></a>
+                    <a href="#news"><h3><b>Go Pro</b></h3></a>
+                    <a href="#news"><h3><b>Contact</b></h3></a>
+                    <div class="dropdown">
+                    <button class="dropbtn" onclick="myFunction()"><h3><b>Explore</b></h3>
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown">
+                      <a href="#"><h3>My wishlist</h3></a>
+                      <a href="#"><h3>My orders</h3></a>
+                      <a href="#"><h3>Track orders</h3></a>
+                    </div>
+                    </div> 
+                  </div>
+                  <script>
+                  /* When the user clicks on the button, 
+                  toggle between hiding and showing the dropdown content */
+                  function myFunction() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                  }
+                  
+                  // Close the dropdown if the user clicks outside of it
+                  window.onclick = function(e) {
+                    if (!e.target.matches('.dropbtn')) {
+                    var myDropdown = document.getElementById("myDropdown");
+                      if (myDropdown.classList.contains('show')) {
+                        myDropdown.classList.remove('show');
+                      }
+                    }
+                  }
+                  </script>
+            
+            <div class="container">
+                <div class="image">
+                  <img src="bottle collage.jpg">
+                </div>
+                <div class="text">
+                  <form name="myForm" action="./gexp4.php" method="post" onsubmit="return(validate())">
+                    <p><b>NAME:</b></p> <input type="text" id ="name" name="name">
+                    
+                    <p><b>PHONE NUMBER:</b></p><input type="text" id ="phno" name="phno">
+                    
+                    <p><b>ADDRESS:</b></p>
+                    <textarea id="address" name="address" rows="5" cols="40" placeholder="..Enter your address here.....">
+                    </textarea>
+                    
+                    <fieldset>
+                        <legend><b>MATERIAL OF THE BOTTLE:</b></legend>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="a">
+                            BPA-PLASTIC<br>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="b">
+                            ALUMINIUM<br>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="c">
+                            STAINLESS STEEL<br>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="d">
+                            GLASS<br>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="e">
+                            INSULATOR<br>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="f">
+                            ECO-FRIENDLY <br>
+                            <input type="radio" id="bottlematerial" name="bottlematerial" value="g">
+                            SPORTS <br>
+                            
+                    </fieldset>
+                    <br>
+                    <label for="bottletype">TYPE OF BOTTLE NEEDED (mention the number from the image):</label><br>
+                    <input type="number" id="bottletype" name="bottletype" min="1" max="16">
+                    <br>
+                    <fieldset>
+                        <legend><b>SIPPER NEEDED:</b></legend>
+                            <input type="radio" id="sipper" name="sipper" value="1">
+                            YES<br>
+                            <input type="radio" id="sipper" name="sipper" value="2">
+                            NO<br>
+                    </fieldset>
+                    <br>
+                    <p><b>COLOR OF THE BOTTLE:</b></p>
+                    <input type="color" id="favcolor" name="favcolor" value="#000000">
+                    <p><b>QUANTITY OF THE BOTTLE (in liters):</b></p>
+                    <input type="number" id="quanbottle" name="quanbottle"><br>
+                    <p><b>NUMBER OF BOTTLE NEEDED:</b></p>
+                    <input type="number" id="bottleno" name="bottleno"><br>
+                    <p><b>TEXT/URL OF THE IMAGE TO BE PRINTED IN BOTTLE:</b></p>
+                    <textarea id="bottleprint" name="bottleprint" rows="5" cols="40">
+                    ..Enter here.....
+                    </textarea>
+                    <br>
+                    <button onclick="validate()">proceed</button>
+                    <input type="submit" name="btn">
+                  </form>
+                </div>
+            </div>
+                      
+            <script type="text/javascript">    
+              function validate() {
+                  if( document.myForm.name.value == "" ) {
+                      alert( "Please enter your Name!" );
+                      document.myForm.name.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.phno.value == "" ) {
+                      alert( "Please enter your phone number!" );
+                      document.myForm.phno.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.address.value == "" ) {
+                      alert( "Please enter your address!" );
+                      document.myForm.address.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.bottlematerial.value == "" ) {
+                      alert( "Select material of bottle needed!" );
+                      document.myForm.bottlematerial.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.bottletype.value == "" ) {
+                      alert( "Select material of bottle needed!" );
+                      document.myForm.bottletype.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.sipper.value == "" ) {
+                      alert( "Select whether sipper needed or not!" );
+                      document.myForm.sipper.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.favcolor.value == "" ) {
+                      alert( "Select the bottle colour!" );
+                      document.myForm.favcolor.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.quanbottle.value == "" ) {
+                      alert( "Enter the quantity of bottle needed!" );
+                      document.myForm.quanbottle.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.bottleno.value == "" ) {
+                      alert( "Enter the number of bottles needed" );
+                      document.myForm.bottleno.focus() ;
+                      return false;
+                      }
+                  if( document.myForm.bottleprint.value == "" ) {
+                      alert( "Please enter the content to be printed in your bottle" );
+                      document.myForm.bottleprint.focus() ;
+                      return false;
+                      }
+                  return( true );
+                  
+              }
+            </script>        
+    </body>
+</html>
